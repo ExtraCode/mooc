@@ -1,0 +1,3 @@
+--- DEV ---
+- lancer composer install
+- lancer php bin/console importmap:install
