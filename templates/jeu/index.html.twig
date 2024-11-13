@@ -3,17 +3,34 @@
 {% block title %}{{ parent() }} Présentation de jeux de société{% endblock %}
 
 {% block body %}
-    <h1>Ma page d'accueil</h1>
 
-    <div class="row">
-        <div class="col-6">
-            Text
-        </div>
-        <div class="col-6">
-            Text
-        </div>
-    </div>
+    <section class="container">
 
-    <button type="button" class="btn btn-outline-success">Super !</button>
+        <h1>Loca Jeu - Nos jeux de société</h1>
+
+        <p>Louez vos jeux de société, de particulier à particulier.</p>
+
+        {# Liste les jeux #}
+        <div class="d-flex flex-wrap justify-content-between">
+
+            {% for jeu in jeux %}
+
+                <div class="card mt-3" style="width: 18rem;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ jeu.nom }}</h5>
+                        <p>Genre : {{ jeu.genre }}</p>
+                        <p class="card-text">{{ jeu.description }}</p>
+                        <a href="#" class="btn btn-primary">Voir le jeu</a>
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+
+    </section>
 
 {% endblock %}
