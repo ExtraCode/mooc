@@ -26,8 +26,6 @@ class Jeu
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\Column]
-    private ?int $prix = null;
 
     // public function __construct()
     // {
@@ -87,16 +85,5 @@ class Jeu
         return $this;
     }
 
-    public function getPrix(): ?int
-    {
-        return $this->prix;
-    }
-
-    public function setPrix(int $prix): static
-    {
-        $this->prix = $prix;
-
-        return $this;
-    }
 
 }
